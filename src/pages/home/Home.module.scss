@@ -1,0 +1,259 @@
+
+@import "../../variables.module.scss";
+@import "../../breakpoints.module.scss";
+
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+.landingPage{
+    max-width: 100vw;
+    height: 100vh;
+    position: relative;
+    color: #ffff;
+    // padding: 0;
+    @include xs{
+        // padding: 0 30px;
+    }
+    @include maxbreakpoint(600px){
+        padding: 120px 0 80px;
+        height: 100%;
+    }
+    @include maxbreakpoint(320px){
+        padding: 80px 0 50px;
+        height: 100%;
+    }
+    
+
+
+}
+    .pageWrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .imageSide{
+            flex-basis: 50%;
+            height: 100%;
+            display: grid;
+            place-content: center;
+            box-shadow: -200px 40px 88px -183px rgba(220,220,220,0.37) inset;
+            -webkit-box-shadow: -200px 40px 88px -183px rgba(220,220,220,0.37) inset;
+            -moz-box-shadow: -200px 40px 88px -183px rgba(220,220,220,0.37) inset;
+            @include maxbreakpoint(1100px){
+                width: 400px;
+            
+             }
+
+            .imageWrapper{
+                max-width: 600px;
+                height: 338px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+
+            }
+            @include xs{
+                display:none;
+                
+            }
+            @include lg{
+                display: grid;
+
+            }
+        }
+        .formWrapper{
+            flex-basis: 50%;
+            display: none;
+            height: 100%;
+            display: grid;
+            place-content: center;
+            @include maxbreakpoint(900px){
+                flex-basis: 100%;
+        
+            }
+
+            div{
+                width: 500px;
+                height: auto;
+                @include maxbreakpoint(1100px){
+                    width: 400px;
+                }
+                @include maxbreakpoint(962px){
+                    width: 600px;
+                }
+               
+                @include maxbreakpoint(600px){
+                    max-width: 450px;
+                }
+                @include maxbreakpoint(450px){
+                    max-width: 380px;
+                    
+                }
+                @include maxbreakpoint(380px){
+                    width: 340px;
+                    
+                }
+                @include maxbreakpoint(340px){
+                    width: 300px;
+                    
+                }
+                h1{
+                    color: $deep-blue;
+                    font-family: 'Prompt', sans-serif;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 55px;
+                    letter-spacing: -0.04em;
+                    text-align: left;
+                    padding:0 0 15px 20px;
+                    @include maxbreakpoint(600px){
+                        font-size: 32px;
+                    }
+    
+                }
+                p{
+                    color: $faint-deep;
+                    font-family: 'Prompt', sans-serif;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    padding-left: 20px;
+                    @include maxbreakpoint(600px){
+                        font-size: 16px;
+                    }
+    
+                }
+                form{
+                    max-width: 100%;
+                    margin-top: 40px;
+                    padding: 20px;
+                    @include maxbreakpoint(600px){
+                     margin-top: 20px;
+                    }
+                
+                    .formInput{
+                        max-width: 100%;
+                        height: 50px;
+                        margin-bottom: 25px;
+                        @include maxbreakpoint(320px){
+                           height: 30px;
+                           margin-bottom: 15px;
+                        }
+                        input{
+                            
+                            width: 100%;
+                            height: 100%;
+                            padding-left: 10px;
+                            font-family: 'Prompt', sans-serif;
+                            border: 2px solid $transparent-deep ;
+                            outline: 0;
+                            transition: $smooth;
+                            border-radius: 5px;
+                            input::placeholder{
+                                color: $transparent-deep;
+                                font-family: 'Prompt', sans-serif;
+                                font-weight: bolder;
+                                
+                            }
+                            input:focus{
+                                border: 0;
+                                outline: 2px solid $deep-border;
+                            }
+                        }
+                    }
+                
+                    .passInput{
+                        position: relative;
+            
+                    }
+                    span{
+                        position: absolute;
+                        right: 10px;
+                        top: 18px;
+                        color:$sky-blue;
+                        cursor: pointer;
+                        font-size: 12px;
+                        font-family: 'Prompt', sans-serif;
+                        letter-spacing: 0.1em;
+                        @include maxbreakpoint(320px){
+                            top: 8px;
+                            font-size: 10px;
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        font-size: 12px;
+                        color: $sky-blue;
+                        @include maxbreakpoint(320px){
+                            font-size: 10px;
+                        }
+                    }
+                    .btn{
+                        display: block;
+                        width: 100%;
+                        font-family: 'Prompt', sans-serif;
+                        font-size: 14px;
+                        padding: 15px 10px;
+                        margin-top: 40px;
+                        border: 0;
+                        border-radius: 8px;
+                        color: #fff;
+                        background-color: $sky-blue;
+                        @include maxbreakpoint(320px){
+                            margin-top: 25px;
+                            padding: 10px;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+.logo{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 106px;
+    left: 132px;
+    @include maxbreakpoint(962px){
+        top: 30px;
+        left: 30px;
+    }
+    @include maxbreakpoint(320px){
+        top:10px;
+        left: 30px;
+    }
+
+    span:first-child{
+        width: 25px;
+        height: 25px;
+        display: block;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    span:nth-child(2){
+        width:139px ;
+        height: 36px;
+        display: block;
+        img{
+            width: 100%;
+            height: 36px;
+            
+        }
+    }
+    
+}
